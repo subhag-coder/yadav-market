@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>यादव मार्केट - Yadav Market</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Header with SVG and Title -->
+  <header class="bg-white shadow p-6">
+    <div class="max-w-7xl mx-auto flex flex-col items-center">
+      <div class="flex items-center gap-2 animate__animated animate__fadeInDown">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="#1e40af" width="40" height="40" viewBox="0 0 24 24">
+          <path d="M2 17.243l1.414 1.414L20.657 1.414 19.243 0 2 17.243zm4.95-3.535l1.414 1.414 1.414-1.414-1.414-1.414L6.95 13.708zm4.243-4.242l1.414 1.414 1.414-1.414-1.414-1.414-1.414 1.414z"/>
+        </svg>
+        <h1 class="text-4xl font-extrabold text-blue-700">यादव मार्केट</h1>
+      </div>
+      <span class="text-sm text-gray-600 mt-1">Shops & Rooms for Rent</span>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="bg-blue-600 text-white p-4 text-center">
+    <a href="about2.html" class="mx-4 hover:underline">About</a>
+    <a href="#contact" class="mx-4 hover:underline">Contact</a>
+    <a href="#location" class="mx-4 hover:underline">Location</a>
+    <a href="rent.html" class="mx-4 hover:underline">Rent Details</a>
+  </nav>
+
+  <!-- Language Switcher -->
+  <div class="text-center mt-4">
+    <button onclick="showLang('en')" class="bg-blue-600 text-white px-4 py-2 rounded-lg m-1">English</button>
+    <button onclick="showLang('hi')" class="bg-blue-600 text-white px-4 py-2 rounded-lg m-1">हिंदी</button>
+  </div>
+
+  <!-- English Content -->
+  <div id="lang-en">
+    <section id="about" class="py-12 text-center">
+      <h2 class="text-4xl text-blue-800 font-bold mb-4">Welcome to Yadav Market</h2>
+      <p class="text-lg">Affordable rental shops and rooms at a prime location in Itwa.</p>
+    </section>
+
+    <section id="location" class="bg-white py-12 px-4 text-center">
+      <h3 class="text-2xl font-bold text-blue-800 mb-4">Market Address</h3>
+      <p class="text-lg">
+        Yadav Market,<br />
+        Kathela Chauraha, Itwa,<br />
+        Siddharthnagar, UP - 272192
+      </p>
+    </section>
+
+    <section id="contact" class="bg-blue-50 py-12 px-4 text-center">
+      <h3 class="text-2xl font-bold text-blue-800 mb-4">Contact</h3>
+      <p class="text-lg"><strong>Manager:</strong> Bajrangi Yadav</p>
+      <p class="text-lg"><strong>Phone:</strong> 8528128394</p>
+    </section>
+  </div>
+
+  <!-- Hindi Content -->
+  <div id="lang-hi" class="hidden">
+    <section class="py-12 text-center">
+      <h2 class="text-4xl text-blue-800 font-bold mb-4">यादव मार्केट में आपका स्वागत है</h2>
+      <p class="text-lg">सस्ते किराए पर दुकान और गोदाम, प्रमुख स्थान पर उपलब्ध है।</p>
+    </section>
+
+    <section class="bg-white py-12 px-4 text-center">
+      <h3 class="text-2xl font-bold text-blue-800 mb-4">बाजार का पता</h3>
+      <p class="text-lg">
+        यादव मार्केट,<br />
+        कठेला चौराहा, इटवा,<br />
+        सिद्धार्थनगर, उत्तर प्रदेश - 272192
+      </p>
+    </section>
+
+    <section class="bg-blue-50 py-12 px-4 text-center">
+      <h3 class="text-2xl font-bold text-blue-800 mb-4">संपर्क करें</h3>
+      <p class="text-lg"><strong>प्रबंधक:</strong> बजरंगी यादव</p>
+      <p class="text-lg"><strong>फोन:</strong> 8528128394</p>
+    </section>
+  </div>
+
+  <!-- Language Toggle Script -->
+  <script>
+    function showLang(lang) {
+      document.getElementById("lang-en").classList.add("hidden");
+      document.getElementById("lang-hi").classList.add("hidden");
+      document.getElementById(`lang-${lang}`).classList.remove("hidden");
+    }
+  </script>
+
+</body>
+</html>
